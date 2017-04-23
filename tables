@@ -1,0 +1,326 @@
+// 타임존
+timezone
+	utc_code, utc_name, gmt_time, utc_kor_name, utc_eng_name
+
+// 사용자 접근 이력
+user_access
+	auth_key, access_ip, user_no, header, access_date
+
+// 북마크
+bookmark
+	content_no, reg_date, user_no
+
+// 인증 정보
+connect_service 
+	user_no, service_type, service_name, user_id, password, access_token, auth_type, refresh_token, token_expire_time, is_valid, reg_date, upd_date
+
+// 컨텐츠 롤백 이력
+content_hist
+	content_no, hist_type, hist_parent_no, hist_parent_no_array, hist_text, reg_user_no, reg_date, content_data, custom_data, title
+
+// 컨텐츠
+content
+	content_type, content_parent_no, title, preview_content, content, content_status, content_level, write_user_no, write_date, reg_user_no, reg_date, content_status_type, content_status_order
+
+// 컨텐츠 인포
+content_info
+	content_no, like_count, reply_count, upd_date
+
+// 관련 컨텐츠
+content_rel_mapping
+	content_no, rel_content_no, reg_date, reg_user_no
+
+// 의사결정
+confirm (
+	confirm_title, confirm_content, content_no, confirm_user_no, req_user_no, req_date, confirm_type, confirm_parent_no, use_yn
+
+// 의사결정 이력
+confirm_hist
+	confirm_title, confirm_content, content_no, confirm_user_no, req_user_no, req_date, confirm_type, confirm_parent_no, use_yn
+
+// myb에서 content off 한 유저
+watcher_type
+	user_no, parent_type, parent_no
+
+// 피드
+user_feed
+	feed_type, feed_text, project_no, content_no, parent_no, some_count, reg_date, upd_date, user_no, reg_user_no, reg_user_name, search_text, sub_type, sub_no, sub_no_array
+
+
+// 서브 파일
+sub_file
+	file_no, sub_no, sub_type, reg_user_no, reg_date
+
+// 컨텐츠 파일
+file
+	file_parent_type, file_name, save_file_name, file_size, file_content_type , file_ext, image_yn, file_path_prefix, file_path, thumb_file_path, ip_address, reg_date, reg_user_no, down_count, file_use_yn, file_del_yn, ext_type
+
+// 좋아요
+like
+	like_type, like_parent_no, user_no, reg_date
+
+// 링크
+link_data
+	link_parent_type, link_parent_no, link_url, link_title, link_image, link_description, link_author, link_type, link_sub_type, reg_user_no
+
+// 멘션
+mention
+	user_no, mention_type, content_no, reply_no, reg_user_no, reg_date
+
+
+// push 데이타
+push_message
+	loc_key, loc_args, custom_param
+
+// push 결과
+push_result
+	message_no, login_no, result_status, fail_result, push_date
+
+// noti
+noti
+	noti_parent_no
+	, project_no
+	, noti_content
+	, noti_type
+	, target_user_no
+	, read_yn
+	, first_read_date
+	, use_yn
+	, reg_user_no
+	, reg_date
+
+
+// 사용자 초데
+user_invite
+	invite_user_no, invite_email, invite_date, join_yn
+
+// 가입요청 메일 인증 
+ join_mail_auth
+	join_email, auth_code, req_type, req_date, join_yn
+
+
+// 파트너 초대
+user_partner_invite
+	invite_user_no, invite_no, invite_type, invite_date
+
+
+// 프로젝트 가입 대기
+project_join_wait
+	project_no, user_no, reg_date
+
+
+// 프로젝트 멤버 가입
+project_member 
+	project_no, user_no, member_level, member_status, join_date
+
+
+// 프로젝트 멤버 이력
+project_member_hist
+	project_no, user_no, mem_hist_type, mem_hist_desc, reg_user_no, reg_date
+
+
+// 멤버 초대
+project_member_invite 
+	project_no, invite_user_no, invite_no, invite_type, invite_date
+
+// 프로젝트 등록
+project
+	project_name, manager_user_no, content_level, reg_user_no, reg_date, project_status, invite_link_code
+
+// 프로젝트 멤버
+project_member 
+	project_no, user_no, member_level, member_status, join_date
+
+// 프로젝트 멤버 이력
+project_member_hist
+	project_no, user_no, mem_hist_type, mem_hist_desc, reg_user_no, reg_date
+
+// 프로젝트 멤버 초대
+project_member_invite
+	project_no, invite_user_no, invite_no, invite_type, invite_date
+
+
+// 프로젝트 가입 대기
+project_join_wait
+	project_no, user_no, reg_date
+
+
+// 컨텐츠 댓글
+content_reply
+	content_no, title, reply_content, reply_status, reg_user_no, reg_date
+
+
+// 리플 글감
+reply_materials
+	reply_no, materials_type, materials_no
+
+// 일정 관리
+schedule
+			start_date
+			, start_datetime
+			, end_date
+			, end_datetime
+			, schedule_type
+			, schedule_title
+			, schedule_parent_no
+			, schedule_use_yn
+			, content_no
+			, reg_user_no
+			, reg_date
+			, utc_code
+			, location
+			, description
+
+
+// 일정 이력 든록
+schedule_hist
+			schedule_no
+			, start_date
+			, start_datetime
+			, end_date
+			, end_datetime
+			, schedule_type
+			, schedule_title
+			, schedule_parent_no
+			, schedule_use_yn
+			, content_no
+			, change_type
+			, change_user_no
+			, change_date
+			, utc_code
+
+
+// 일정 참여자
+schedule_user
+	schedule_no, user_no, reg_date, reg_user_no
+
+
+// 컨텐츠 공유
+content_share
+	content_no, user_no, owner_yn, reg_user_no, reg_date
+
+
+// 스토리지 정보
+storage
+	storage_type, parent_no, total_size, use_size, remain_size
+
+
+// 임시 공유지
+content_share_temp
+	content_no, user_no
+
+
+// 컨텐츠 태그
+tag_content 
+	content_no, tag, reg_user_no, reg_date
+
+
+// 프로젝트 태그
+tag_project
+	project_no, tag, tag_count
+
+
+// 사용자 태그
+tag_myb
+	user_no, tag, tag_count
+
+// 할 일
+todo
+			todo_parent_type
+			, todo_parent_no
+			, content_no
+			, todo_title
+			, status
+			, status_date
+			, todo_content
+			, start_date
+			, start_datetime
+			, end_date
+			, end_datetime
+			, target_user_no
+			, send_user_no
+			, send_date
+			, todo_level
+			, reg_date
+			, reg_user_no
+			, utc_code
+			, todo_use_yn
+			, sort_date
+			, sort_end_date
+
+
+// 할 일 이력
+todo_hist
+			todo_no
+			, todo_title
+			, status
+			, status_date
+			, todo_content
+			, start_date
+			, start_datetime
+			, end_date
+			, end_datetime
+			, change_type
+			, sub_type
+			, sub_no
+			, sub_no_array
+			, target_user_no
+			, send_user_no
+			, change_user_no
+			, change_date
+			, todo_parent_type
+			, todo_parent_no
+			, content_no
+			, utc_code
+			, todo_use_yn
+
+
+// 할 일 순서
+todo_user_order
+	user_no, todo_no, order_no
+
+
+// 로그인 이력
+login_hist
+	user_no, auth_key, login_ip, device_type, login_date, last_access_date
+
+// 탈퇴 사유
+user_out
+	user_no, reason, email_domain
+
+// 사용자 부가 정보
+user_info
+	user_no, user_profile_no, user_name, user_email, email_domain, tel1_no, tel2_no, user_url, last_login_date, last_login_ip, agree01, agree02, lang_type, utc_code
+
+// 암호 재설정 요청
+pw_reset_req
+	reset_email, auth_key, req_ip, req_date
+
+// 인증 코드
+user_auth_code
+	user_no, auth_type, auth_code, gen_date
+
+// 메일 수신 금지
+mail_unsubscribe
+	user_email, reg_date, upd_date
+
+// 유저 상태
+user_status
+	user_no, screen_status, screen_req_date
+
+// 알림 온오프
+watcher_without
+	parent_type, parent_no, user_no, req_date
+
+
+	
+
+
+
+
+
+
+
+
+
+
